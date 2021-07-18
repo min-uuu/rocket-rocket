@@ -31,7 +31,7 @@ let getRocket = () => {
             for (let i = 0; i < youtube.length; i++) {
                 title = data["result"][i].provider.name
                 console.log(title)
-                youtube[i].href = `https://www.youtube.com/results?search_query=${title}+live`
+                youtube[i].href = `https://www.youtube.com/results?search_query=${title}+rocket+live`
             }
         })
 }
