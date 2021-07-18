@@ -5,12 +5,13 @@ let getRocket = () => {
         })
         .then(data => {
             console.log(data);
-
             var missionName = document.getElementsByClassName("missionName");
             var provider = document.getElementsByClassName("provider");
             var country = document.getElementsByClassName("country");
             var date = document.getElementsByClassName("date");
             var discription = document.getElementsByClassName("discription");
+            var youtube = document.getElementsByClassName("youtube-link");
+            var title
 
             for (let i = 0; i < missionName.length; i++) {
                 missionName[i].innerHTML = data["result"][i].name;
@@ -27,7 +28,13 @@ let getRocket = () => {
             for (let i = 0; i < discription.length; i++) {
                 discription[i].innerHTML = data["result"][i].launch_description;
             }
+            for (let i = 0; i < youtube.length; i++) {
+                title = data["result"][i].provider.name
+                console.log(title)
+                youtube[i].href = `https://www.youtube.com/results?search_query=${title}+live`
+            }
         })
 }
+
 
 getRocket();
