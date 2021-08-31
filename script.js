@@ -5,13 +5,13 @@ let getRocket = () => {
         })
         .then(data => {
             console.log(data);
-            var missionName = document.getElementsByClassName("missionName");
-            var provider = document.getElementsByClassName("provider");
-            var country = document.getElementsByClassName("country");
-            var date = document.getElementsByClassName("date");
-            var discription = document.getElementsByClassName("discription");
-            var youtube = document.getElementsByClassName("youtube-link");
-            var title
+            let missionName = document.getElementsByClassName("missionName");
+            let provider = document.getElementsByClassName("provider");
+            let country = document.getElementsByClassName("country");
+            let date = document.getElementsByClassName("date");
+            let discription = document.getElementsByClassName("discription");
+            let youtube = document.getElementsByClassName("youtube-link");
+            let title
 
             for (let i = 0; i < missionName.length; i++) {
                 missionName[i].innerHTML = data["result"][i].name;
