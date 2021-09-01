@@ -51,6 +51,10 @@
     width: 100px;
 }
 
+.xxsmall {
+    width: 50px;
+}
+
 .light-mode {
     background-color: white;
     color: black;
